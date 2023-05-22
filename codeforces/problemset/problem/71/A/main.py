@@ -1,16 +1,14 @@
 def process(word):
-    if len(word)<=10:
+    if len(word) <= 10:
         print(word)
     else:
-        print(word[0]+str(len(word)-2)+word[-1])
+        print(word[0] + str(len(word) - 2) + word[-1])
 
 
 def main():
-    # with open('input.txt', 'r') as file:
-    #     content = file.read()
-    #     lines = content.split('\n')
-    #     for i in lines[1:]:
-    #         process(i)
+    import sys
+    sys.stdin = open('input.txt', 'r')
+    # sys.stdout = open('output.txt', 'w')
 
     n = int(input())
     for i in range(n):
