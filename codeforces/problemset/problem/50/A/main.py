@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/50/A
+
 def main():
     a, b = map(int, input().split(' '))
     area = a * b

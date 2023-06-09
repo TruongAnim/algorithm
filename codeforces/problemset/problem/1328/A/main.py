@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/1328/A
+
 def main():
     testcase = int(input())
     for test in range(testcase):

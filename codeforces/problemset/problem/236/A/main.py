@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/236/A
+
 def main():
     username = input()
     chars = {chr(ord('a') + i): 0 for i in range(26)}

@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/41/A
+
 def main():
     word1 = input()
     word2 = input()

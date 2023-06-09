@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/282/A
+
 def main():
     import sys
     sys.stdin = open('input.txt', 'r')

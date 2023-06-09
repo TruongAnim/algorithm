@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/791/A
+
 def main():
     limak, bob = map(int, input().split(' '))
     year = 0

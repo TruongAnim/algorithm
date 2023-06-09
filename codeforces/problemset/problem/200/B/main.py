@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/200/A
+
 def main():
     n = int(input())
     l = list(map(int, input().split(' ')))

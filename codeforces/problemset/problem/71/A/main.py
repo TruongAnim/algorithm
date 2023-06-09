@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/71/A
+
 def process(word):
     if len(word) <= 10:
         print(word)

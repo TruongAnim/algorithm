@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/344/A
+
 def main():
     n = int(input())
     sum = 1

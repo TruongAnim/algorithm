@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/546/A
+
 def main():
     k, n, w = map(int, input().split(' '))
     sum = 0

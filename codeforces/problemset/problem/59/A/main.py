@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/59/A
+
 def main():
     word = input()
     upper = 0

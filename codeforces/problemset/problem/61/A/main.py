@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/61/A
+
 def main():
     number1 = input()
     number2 = input()

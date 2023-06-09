@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/266/B
+
 def main():
     n, t = map(int, input().split(' '))
     queue = [x for x in input()]

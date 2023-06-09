@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/271/A
+
 def main():
     year = int(input())
     for i in range(year + 1, 10000):

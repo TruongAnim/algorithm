@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/977/A
+
 def main():
     number, k = map(int, input().split(' '))
     for i in range(k):

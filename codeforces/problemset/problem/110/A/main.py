@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/110/A
+
 def main():
     number = input()
     l_number = 0

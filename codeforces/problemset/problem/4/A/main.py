@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/4/A
+
 def main():
     a = int(input())
     if a > 2 and a % 2 == 0:

@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/677/A
+
 def main():
     n, h = map(int, input().split(' '))
     a = map(int, input().split(' '))

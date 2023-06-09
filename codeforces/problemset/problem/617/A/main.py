@@ -1,3 +1,5 @@
+# https://codeforces.com/problemset/problem/617/A
+
 def main():
     n = int(input())
     temp = n // 5
