@@ -1,3 +1,5 @@
+# https://codeforces.com/contest/1840/problem/B
+
 price = [2 ** i for i in range(33)]
 
 
