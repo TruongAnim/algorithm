@@ -2,8 +2,11 @@
 # => {3,1,2}, {3,2,1}, {1,2,3}, {1,3,2} , {2,1,3}, {2,3,1}.
 
 def main():
-    inputArray = [i for i in range(3)]
-    print(permutation(inputArray))
+    inputArray = [i for i in range(4)]
+    for i in permutation(inputArray):
+        if i[0]<i[1]:
+            print(i)
+    # print(permutation(inputArray))
 
 
 def permutation(lst):
