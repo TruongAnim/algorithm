@@ -1,5 +1,6 @@
 # https://codeforces.com/contest/1850/problem/E
 
+
 def main():
     test = int(input())
     for _ in range(test):
