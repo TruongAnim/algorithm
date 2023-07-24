@@ -1,4 +1,4 @@
-# https://codeforces.com/contest/1847/problem/B
+# https://codeforces.com/contest/1850/problem/D
 
 def main():
     test = int(input())
