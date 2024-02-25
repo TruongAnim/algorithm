@@ -4,27 +4,16 @@ def main():
     test = int(input())
     for _ in range(test):
         n = int(input())
-        a = list(map(int, input().split(' ')))
-        s = sum(a)
-        tb = s // n
-        if tb * n != s:
-            print('NO')
-            continue
-        du = 0
-        check = True
-        for i in a:
-            if i < tb:
-                du -= tb - i
-            if i > tb:
-                du += i - tb
-            if du < 0:
-                check = False
-                break
-        if not check:
-            print('NO')
-            continue
+        is_tri = False
+        for t in range(n):
+            temp = input()
+            for i in range(1, n - 1):
+                if temp[i] == '1' and temp[i - 1] == '0' and temp[i + 1] == '0':
+                    is_tri = True
+        if is_tri:
+            print('TRIANGLE')
         else:
-            print('YES')
+            print('SQUARE')
 
 
 if __name__ == '__main__':
