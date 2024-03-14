@@ -1,42 +1,46 @@
 # https://codeforces.com/contest/1935/problem/B
 
-def compare_strings(str1, str2):
-    if str1 < str2:
-        return -1
-    elif str1 > str2:
-        return 1
-    else:
-        return 0
-
 
 def main():
-    import sys
-    sys.stdin = open('input.txt', 'r')
     test = int(input())
     for _ in range(test):
         n = int(input())
-        a = [input(), input()]
-        m = []
+        a = list(map(int, input().split(' ')))
+        b = [False for i in range(n)]
+        missing = n
+        for i in a:
+            b[i] = True
+        for i, value in enumerate(b):
+            if not value:
+                missing = min(i, missing)
+        # print(missing)
+        if missing == 0:
+            print(2)
+            print(1, 1)
+            print(2, n)
+            continue
+        temp = [False for i in range(missing)]
         count = 0
-        result = a[0][0]
-        is_done = False
-        for i in range(n - 1):
-            right = a[0][i + 1]
-            bot = a[1][i]
-            if right == bot:
-                result += right
+        left = 0
+        result = []
+        for i, v in enumerate(a):
+            if v < missing and not temp[v]:
+                temp[v] = True
                 count += 1
-            elif right > bot:
-                result += a[1][i:]
-                is_done = True
-                break
-            else:
-                result += right
-                count = 0
-        if not is_done:
-            result += a[1][-1]
-        print(result)
-        print(count + 1)
+                if count == missing:
+                    if len(result) == 1:
+                        result.append((left, n - 1))
+                        break
+                    result.append((left, i))
+                    left = i + 1
+                    count = 0
+                    temp = [False for i in range(missing)]
+        if len(result) < 2:
+            print(-1)
+        else:
+            print(2)
+            for i in result:
+                print(i[0] + 1, i[1] + 1)
 
 
 if __name__ == '__main__':
