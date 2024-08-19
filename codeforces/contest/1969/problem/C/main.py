@@ -59,7 +59,7 @@ def check(A, turn, k, gb_sum):
 
 def test_solution():
     # import sys
-    # sys.stdin = open('input.txt', 'r')
+    # sys.stdin = open('lv10.csv', 'r')
     test = int(input())
     h = []
     for _ in range(test):

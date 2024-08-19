@@ -12,7 +12,7 @@ def check(a, n):
 
 def main():
     # import sys
-    # sys.stdin = open('input.txt', 'r')
+    # sys.stdin = open('lv10.csv', 'r')
     test = int(input())
     for _ in range(test):
         n = int(input())

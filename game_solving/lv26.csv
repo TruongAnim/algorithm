@@ -1,0 +1,11 @@
+10
+HR,SR,HP,_
+SP,HP,SB,_
+HR,G,_,_
+G,HB,SB,W
+SR,W,HB,_
+HB,G,HP,SR
+SP,SB,W,_
+SB,W,G,HR
+SR,HB,_,_
+HP,SP,SP,HR

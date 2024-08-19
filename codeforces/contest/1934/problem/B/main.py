@@ -18,7 +18,7 @@ pre = [0, 1, 2, 1, 2, 3, 1, 2, 3, 2, 1, 2, 2, 2, 3, 1, 2, 3, 2, 3, 2, 2, 3, 3, 3
 
 def main():
     # import sys
-    # sys.stdin = open('input.txt', 'r')
+    # sys.stdin = open('lv10.csv', 'r')
     test = int(input())
     for _ in range(test):
         n = int(input())

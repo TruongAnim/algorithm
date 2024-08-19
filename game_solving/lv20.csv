@@ -1,0 +1,11 @@
+10
+G,P,G,P
+OR,C,G,B
+BR,Y,_
+P,O,OR,BR
+OR,C,_,_
+B,B,_,_
+P,O,B,BR
+Y,G
+O,C,BR,O
+Y,OR,C,Y

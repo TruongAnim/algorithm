@@ -67,8 +67,11 @@ class Cell:
 
     def check_oke(self):
         global count_items
-        return len(self.items) == 1 and self.last()[-1] == self.cell_len and count_items[
-            self.last()[0]] == self.cell_len
+        if len(self.items) == 1:
+            if self.last()[-1] == self.cell_len and count_items[self.last()[0]] == self.cell_len:
+                return 0
+            return 1
+        return len(self.items) - 1
 
     def hard_add(self, item):
         self.items.append(item)
@@ -116,29 +119,23 @@ def recursion(steps, hash_dict, cells, n):
     global is_found, solution
     if is_found:
         return
-    count_done = len([i for i in cells if i.check_oke()])
-    count_not_done = len(count_items) - count_done - 1
-    if n+count_not_done >= len(solution):
+    count_not_done = sum([i.check_oke() for i in cells if i.check_oke() > 0])
+    if n + count_not_done >= len(solution):
         return
     hash_cell = get_hash(cells)
     if hash_cell in hash_dict and hash_dict[hash_cell] <= len(steps):
         return
     hash_dict[hash_cell] = len(steps)
 
-    count = 0
-    for i in cells:
-        if i.check_oke() or len(i.items) == 0:
-            count += 1
-    if count == len(cells):
+    if count_not_done == 0:
         # Stop when found one solution
         # is_found = True
         if len(steps) < len(solution):
             solution = steps[:]
         return
-
     for i in range(len(cells)):
         for j in range(len(cells)):
-            if i != j and not cells[i].check_oke() and not cells[j].check_oke() and can_move(cells[i], cells[j]):
+            if i != j and cells[i].check_oke() != 0 and cells[j].check_oke() != 0 and can_move(cells[i], cells[j]):
                 item = cells[i].last()[:]
                 move(cells[i], cells[j])
                 steps.append((i + 1, j + 1))
@@ -150,8 +147,8 @@ def recursion(steps, hash_dict, cells, n):
 
 def main():
     import sys
-    sys.stdin = open('lv16.csv', 'r')
-    sys.stdout = open('sol_lv16.txt', 'w')
+    sys.stdin = open('lv30.csv', 'r')
+    sys.stdout = open('sol_lv30.txt', 'w')
     # test = int(input())
     for _ in range(1):
         global is_found, solution, count_items

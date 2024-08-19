@@ -16,7 +16,7 @@ def is_power_of(a, b):
 
 def main():
     # import sys
-    # sys.stdin = open('input.txt', 'r')
+    # sys.stdin = open('lv10.csv', 'r')
     test = int(input())
     for t in range(test):
         a, b, l = map(int, input().split(' '))
